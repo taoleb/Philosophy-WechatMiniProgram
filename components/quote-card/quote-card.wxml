@@ -1,0 +1,23 @@
+<!--components/quote-card/quote-card.wxml-->
+<view class="quote-card">
+  <view class="quote-content">
+    <text class="quote-text">"{{quote}}"</text>
+  </view>
+  
+  <view class="quote-info">
+    <text class="quote-author">— {{author}}</text>
+    <text class="quote-source" wx:if="{{source}}">{{source}}</text>
+  </view>
+  
+  <view class="quote-actions">
+    <view class="action-btn" bindtap="toggleFavorite">
+      <view class="action-icon {{isFavorite ? 'favorite-active' : ''}}">♥</view>
+      <text class="action-text">{{isFavorite ? '已收藏' : '收藏'}}</text>
+    </view>
+    
+    <view class="action-btn" bindtap="shareQuote">
+      <view class="action-icon">↗</view>
+      <text class="action-text">分享</text>
+    </view>
+  </view>
+</view>

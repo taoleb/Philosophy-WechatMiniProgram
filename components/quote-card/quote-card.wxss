@@ -1,0 +1,68 @@
+/* components/quote-card/quote-card.wxss */
+.quote-card {
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 40rpx;
+  margin: 30rpx 0;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+.quote-content {
+  margin-bottom: 30rpx;
+}
+
+.quote-text {
+  font-size: 34rpx;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.quote-info {
+  border-left: 4rpx solid #4b6cb7;
+  padding-left: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.quote-author {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.quote-source {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+
+.quote-actions {
+  display: flex;
+  border-top: 1rpx solid #eee;
+  padding-top: 20rpx;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 0;
+}
+
+.action-icon {
+  font-size: 40rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.favorite-active {
+  color: #e74c3c;
+}
+
+.action-text {
+  font-size: 24rpx;
+  color: #666;
+}
