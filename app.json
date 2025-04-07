@@ -1,0 +1,93 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/category/category",
+    "pages/presentation/presentation",
+    "pages/presentation/lifephilosophy_core",
+    "pages/presentation/lifephilosophy_practice",
+    "pages/presentation/lifephilosophy_cases",
+    "pages/presentation/lifephilosophy_thinking",
+    "pages/presentation/thoughtmode/humannature_core",
+    "pages/presentation/thoughtmode/humannature_practice",
+    "pages/presentation/thoughtmode/humannature_cases",
+    "pages/presentation/thoughtmode/humannature_thinking",
+    "pages/presentation/coreprinciples",
+    "pages/presentation/philosophywisdom",
+    "pages/presentation/practicalapp",
+    "pages/presentation/classiccase",
+    "pages/presentation/deepthinking",
+    "pages/presentation/powerofthought",
+    "pages/presentation/thoughtpractical",
+    "pages/presentation/thoughtcase",
+    "pages/presentation/thoughtdeep",
+    "pages/presentation/philosophypractice",
+    "pages/presentation/philosophycase",
+    "pages/presentation/philosophythinking",
+    "pages/presentation/thought_tools",
+    "pages/presentation/thought_practice",
+    "pages/presentation/thought_cases",
+    "pages/presentation/thought_deep",
+    "pages/presentation/peopleinsight",
+    "pages/presentation/peopleinsight_cases",
+    "pages/presentation/peopleinsight_thinking",
+    "pages/presentation/peopleinsight_practice",
+    "pages/presentation/thoughtmode/coreconcepts",
+    "pages/presentation/thoughtmode/practicalapp",
+    "pages/presentation/thoughtmode/classiccases",
+    "pages/presentation/thoughtmode/deepthinking",
+    "pages/presentation/thoughtmode/lazythought_core",
+    "pages/presentation/thoughtmode/lazythought_practice",
+    "pages/presentation/thoughtmode/lazythought_cases",
+    "pages/presentation/thoughtmode/lazythought_thinking",
+    "pages/presentation/lifemeaning",
+    "pages/presentation/lifemeaning_practice",
+    "pages/presentation/lifemeaning_cases",
+    "pages/presentation/lifemeaning_thinking",
+    "pages/presentation/cultural_fusion",
+    "pages/presentation/cultural_fusion_practice",
+    "pages/presentation/cultural_fusion_cases",
+    "pages/presentation/cultural_fusion_thinking",
+    "pages/splash/splash",
+    "pages/search/search",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "哲学小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icons/home.jpg",
+        "selectedIconPath": "assets/icons/home.jpg"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "assets/icons/user.jpg",
+        "selectedIconPath": "assets/icons/user.jpg"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序功能"
+    }
+  }
+}
