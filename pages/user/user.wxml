@@ -1,0 +1,84 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <!-- 用户信息区域 -->
+  <view class="user-info-section">
+    <view class="user-info-wrapper">
+      <view class="user-avatar-container">
+        <image class="user-avatar" src="{{hasUserInfo ? userInfo.avatarUrl : '/assets/default-avatar.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="user-details">
+        <view wx:if="{{!hasUserInfo}}">
+          <text class="user-nickname">未登录</text>
+          <button class="login-btn" bindtap="getUserProfile" wx:if="{{canIUseGetUserProfile}}">点击登录</button>
+        </view>
+        <view wx:else>
+          <text class="user-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 功能区域 -->
+  <view class="features-container">
+    <view class="feature-section">
+      <view class="section-header">
+        <text class="section-title">收藏内容</text>
+        <text class="view-more">查看全部</text>
+      </view>
+      <view class="favorites-list">
+        <block wx:for="{{favorites}}" wx:key="id">
+          <view class="favorite-item" bindtap="goToFavoriteDetail" data-id="{{item.id}}">
+            <view class="favorite-content">
+              <text class="favorite-title">{{item.title}}</text>
+              <text class="favorite-date">{{item.date}}</text>
+            </view>
+            <view class="favorite-icon">›</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    
+    <view class="feature-section">
+      <view class="section-header">
+        <text class="section-title">阅读历史</text>
+        <text class="view-more">查看全部</text>
+      </view>
+      <view class="reading-list">
+        <block wx:for="{{readingHistory}}" wx:key="id">
+          <view class="reading-item" bindtap="continueReading" data-id="{{item.id}}">
+            <view class="reading-info">
+              <text class="reading-title">{{item.title}}</text>
+              <text class="reading-date">{{item.date}}</text>
+            </view>
+            <view class="reading-progress">
+              <view class="progress-bar">
+                <view class="progress-inner" style="width: {{item.progress}}%;"></view>
+              </view>
+              <text class="progress-text">{{item.progress}}%</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 其他功能区域 -->
+  <view class="other-features">
+    <view class="feature-item">
+      <view class="feature-icon">📝</view>
+      <text class="feature-text">学习笔记</text>
+    </view>
+    <view class="feature-item">
+      <view class="feature-icon">🔖</view>
+      <text class="feature-text">我的书签</text>
+    </view>
+    <view class="feature-item">
+      <view class="feature-icon">⚙️</view>
+      <text class="feature-text">设置</text>
+    </view>
+    <view class="feature-item">
+      <view class="feature-icon">❓</view>
+      <text class="feature-text">关于</text>
+    </view>
+  </view>
+</view>
