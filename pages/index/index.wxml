@@ -1,0 +1,29 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 横幅区域 -->
+  <view class="banner">
+    <text class="banner-text">哲学智慧探索</text>
+    <text class="banner-description">探索伟大思想与日常智慧的哲思旅程</text>
+  </view>
+
+  <!-- 分类区域 -->
+  <view class="categories-area">
+    <view class="categories-title">哲学分类</view>
+    <view class="categories-grid">
+      <view wx:for="{{categories}}" wx:key="id" class="category-card" bindtap="goToCategory" data-id="{{item.id}}" data-title="{{item.title}}" style="background-color: white; border-left: 8rpx solid {{item.color}};">
+        <view class="category-content">
+          <view class="category-header">
+            <text class="category-icon">{{item.icon}}</text>
+            <text class="category-title">{{item.title}}</text>
+          </view>
+          <text class="category-description">{{item.description}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 引导提示 -->
+  <view class="guide-tip" wx:if="{{showGuideTip}}">
+    点击分类卡片查看详细内容
+  </view>
+</view>
